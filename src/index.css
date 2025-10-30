@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --starbucks-green: #00704A;
+  --starbucks-light-green: #1E3932;
+  --starbucks-dark-green: #0E382C;
+  --starbucks-cream: #F7F7F7;
+  --starbucks-beige: #F1F1F1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, rgba(30, 57, 50, 0.8) 0%, rgba(0, 112, 74, 0.6) 100%);
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  background-color: var(--starbucks-green);
+  color: white;
+  border: 2px solid var(--starbucks-green);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--starbucks-dark-green);
+  border-color: var(--starbucks-dark-green);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--starbucks-green);
+  border: 2px solid var(--starbucks-green);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--starbucks-green);
+  color: white;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e5e5e5 50%, transparent 100%);
+}
